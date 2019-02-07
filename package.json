@@ -13,11 +13,8 @@
 	},
 	"dependencies": {
 		"gatsby": "^2.0.111",
-		"gatsby-plugin-typography": "^2.2.7",
 		"react": "^16.7.0",
-		"react-dom": "^16.7.0",
-		"react-typography": "^0.16.18",
-		"typography": "^0.16.18"
+		"react-dom": "^16.7.0"
 	},
 	"repository": {
 		"type": "git",

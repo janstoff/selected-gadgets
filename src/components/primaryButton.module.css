@@ -1,0 +1,25 @@
+.btnPrimary {
+	margin-bottom: 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 10px 20px;
+	font-size: 1rem;
+	line-height: 1.42857;
+	border-radius: 4px;
+	transition: all 0.3s;
+	border: none !important;
+}
+
+.btn:focus {
+	outline: 0;
+}
+
+.btn:hover {
+	background: #393e46 !important;
+	color: #fff;
+	outline: none !important;
+}

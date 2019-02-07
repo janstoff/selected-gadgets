@@ -21,8 +21,14 @@
 	border-color: #228822;
 }
 
+input.formControl {
+	height: auto;
+	margin-top: 0.35rem;
+}
+
 textarea.formControl {
 	height: auto;
+	margin-top: 0.35rem;
 }
 
 .btn {
@@ -45,26 +51,6 @@ textarea.formControl {
 
 .btn:focus {
 	outline: 0;
-}
-
-.btnPrimary {
-	background: #228822;
-	color: #fff;
-	border: none !important;
-}
-
-.btnOutlinePrimary {
-	background: transparent;
-	border-color: #228822;
-	color: #228822;
-	cursor: pointer;
-	font-size: 20px;
-}
-
-.btnOutlinePrimary:hover {
-	background: #228822;
-	border-color: transparent;
-	color: #fff;
 }
 
 .btn:hover {

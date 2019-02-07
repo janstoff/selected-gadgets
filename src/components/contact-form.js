@@ -23,7 +23,7 @@ export default () => (
 				<label htmlFor="message">Message</label>
 				<textarea className={styles.formControl} name="message" rows="10" required />
 			</div>
-			<div className="text-right">
+			<div className={styles.formGroup}>
 				<input
 					type="submit"
 					value="SEND MESSAGE"
