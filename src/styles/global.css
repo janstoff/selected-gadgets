@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Raleway|Quicksand');
 
 html {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 	background-color: rgb(44, 43, 43);
 	color: whitesmoke;
 }
