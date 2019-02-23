@@ -1,11 +1,15 @@
 import React from 'react'
+import { FormattedMessage as TranslatedContent } from 'react-intl'
 
 import Layout from '../components/layout'
-import Container from '../components/container'
 
-export default () => (
-	<Layout>
-		<h1>About CSS Modules</h1>
-		<p>CSS Modules are cool</p>
+export default ({ pathContext: { locale } }) => (
+	<Layout locale={locale}>
+		<h1>
+			<TranslatedContent id="about-headline" />
+		</h1>
+		<p>
+			<TranslatedContent id="about-body" />
+		</p>
 	</Layout>
 )

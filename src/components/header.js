@@ -1,21 +1,40 @@
 import React from 'react'
-import { Link } from "gatsby"
+import { FormattedMessage as TranslatedContent } from 'react-intl'
+import LocalizedLink from './localized-link'
 import styles from './header.module.css'
 
 const ListLink = props => (
-    <li className={styles.listLink}>
-      <Link to={props.to} style={{ color: `grey`}} activeStyle={{ color: `white` }}>{props.children}</Link>
-    </li>
-  )
+	<li className={styles.listLink}>
+		<LocalizedLink
+			to={props.to}
+			style={{ color: `grey` }}
+			activeStyle={{ color: `white` }}
+		>
+			{props.children}
+		</LocalizedLink>
+	</li>
+)
 
-export default () => (
-    <header>
-			<Link to="/" style={{ color: `grey`, textShadow: `none`, backgroundImage: `none` }} activeStyle={{ color: `white` }}>
-				<h3>MySweetSite</h3>
-			</Link>
-			<ul className={styles.navigationList}>
-				<ListLink to="/about/">About</ListLink>
-				<ListLink to="/contact/">Contact</ListLink>
-			</ul>
-	  </header>
-    )
+const Header = () => (
+	<header>
+		<LocalizedLink
+			to="/"
+			style={{ color: `grey`, textShadow: `none`, backgroundImage: `none` }}
+			activeStyle={{ color: `white` }}
+		>
+			<h3>
+				<TranslatedContent id="title" />
+			</h3>
+		</LocalizedLink>
+		<ul className={styles.navigationList}>
+			<ListLink to="/about/">
+				<TranslatedContent id="about" />
+			</ListLink>
+			<ListLink to="/contact/">
+				<TranslatedContent id="contact" />
+			</ListLink>
+		</ul>
+	</header>
+)
+
+export default Header

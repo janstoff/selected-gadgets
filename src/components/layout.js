@@ -1,9 +1,39 @@
-import React from "react"
-import Header from "./header"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { IntlProvider, addLocaleData } from 'react-intl'
 
-export default ({ children }) => (
-	<div style={{ margin: `0 auto`, maxWidth: 650, padding: `1.25rem 1rem` }}>
-	  <Header />
-	  {children}
-	</div>
-  )
+// Components
+import Header from './header'
+
+// Locale data
+import enData from 'react-intl/locale-data/en'
+import deData from 'react-intl/locale-data/de'
+
+// Translations
+import en from '../i18n/en.json'
+import de from '../i18n/de.json'
+
+const translations = { en, de }
+
+addLocaleData([...enData, ...deData])
+
+const Layout = ({ locale, children }) => {
+	return (
+		<IntlProvider locale={locale} messages={translations[locale]}>
+			<div style={{ margin: `0 auto`, maxWidth: 650, padding: `1.25rem 1rem` }}>
+				<Header />
+				{children}
+			</div>
+		</IntlProvider>
+	)
+}
+
+Layout.propTypes = {
+	locale: PropTypes.string.isRequired,
+	children: PropTypes.oneOfType([
+		PropTypes.node,
+		PropTypes.arrayOf(PropTypes.node),
+	]).isRequired,
+}
+
+export default Layout

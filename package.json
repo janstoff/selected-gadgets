@@ -5,6 +5,7 @@
 	"version": "0.1.0",
 	"license": "MIT",
 	"scripts": {
+		"clean": "rimraf public/* .cache/*",
 		"build": "gatsby build",
 		"dev": "gatsby develop",
 		"start": "npm run develop",
@@ -14,12 +15,14 @@
 	"dependencies": {
 		"gatsby": "^2.0.111",
 		"react": "^16.7.0",
-		"react-dom": "^16.7.0"
+		"react-dom": "^16.7.0",
+		"react-intl": "^2.8.0"
 	},
 	"devDependencies": {
 		"eslint": "^5.13.0",
 		"eslint-config-prettier": "^4.0.0",
 		"eslint-plugin-prettier": "^3.0.1",
-		"prettier": "^1.16.4"
+		"prettier": "^1.16.4",
+		"rimraf": "^2.6.3"
 	}
 }
