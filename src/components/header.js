@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormattedMessage as TranslatedContent } from 'react-intl'
+import { FormattedMessage as Translated } from 'react-intl'
 import LocalizedLink from './localized-link'
 import styles from './header.module.css'
 
@@ -23,15 +23,15 @@ const Header = () => (
 			activeStyle={{ color: `white` }}
 		>
 			<h3>
-				<TranslatedContent id="title" />
+				<Translated id="title" />
 			</h3>
 		</LocalizedLink>
 		<ul className={styles.navigationList}>
 			<ListLink to="/about/">
-				<TranslatedContent id="about" />
+				<Translated id="about" />
 			</ListLink>
 			<ListLink to="/contact/">
-				<TranslatedContent id="contact" />
+				<Translated id="contact" />
 			</ListLink>
 		</ul>
 	</header>
