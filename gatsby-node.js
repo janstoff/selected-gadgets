@@ -19,6 +19,7 @@ exports.onCreatePage = ({ page, actions }) => {
 				path: localizedPath,
 				context: {
 					locale: language,
+					pagePath: page.path,
 				},
 			})
 		})

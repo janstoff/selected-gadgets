@@ -17,16 +17,14 @@ const translations = { en, de }
 
 addLocaleData([...enData, ...deData])
 
-const Layout = ({ locale, children }) => {
-	return (
-		<IntlProvider locale={locale} messages={translations[locale]}>
-			<div style={{ margin: `0 auto`, maxWidth: 650, padding: `1.25rem 1rem` }}>
-				<Header />
-				{children}
-			</div>
-		</IntlProvider>
-	)
-}
+const Layout = ({ locale, children }) => (
+	<IntlProvider locale={locale} messages={translations[locale]}>
+		<div style={{ margin: `0 auto`, maxWidth: 650, padding: `1.25rem 1rem` }}>
+			<Header locale={locale} />
+			{children}
+		</div>
+	</IntlProvider>
+)
 
 Layout.propTypes = {
 	locale: PropTypes.string.isRequired,
