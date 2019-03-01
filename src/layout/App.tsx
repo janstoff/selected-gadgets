@@ -1,9 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { IntlProvider, addLocaleData } from 'react-intl'
 
+// Styling
+import styles from './app.module.scss'
+
 // Components
-import Header from './header'
+import Header from '../elements/header'
 
 // Locale data
 import enData from 'react-intl/locale-data/en'
@@ -17,21 +19,22 @@ const translations = { en, de }
 
 addLocaleData([...enData, ...deData])
 
-const Layout = ({ locale, children }) => (
-	<IntlProvider locale={locale} messages={translations[locale]}>
-		<div style={{ margin: `0 auto`, maxWidth: 650, padding: `1.25rem 1rem` }}>
+interface AppProps {
+	readonly locale: string
+	readonly children: any
+}
+
+const AppLayout: React.SFC<AppProps> = ({ locale, children }: AppProps) => (
+	<IntlProvider
+		locale={locale}
+		messages={translations[locale]}
+		textComponent={React.Fragment}
+	>
+		<div className={styles.App}>
 			<Header locale={locale} />
 			{children}
 		</div>
 	</IntlProvider>
 )
 
-Layout.propTypes = {
-	locale: PropTypes.string.isRequired,
-	children: PropTypes.oneOfType([
-		PropTypes.node,
-		PropTypes.arrayOf(PropTypes.node),
-	]).isRequired,
-}
-
-export default Layout
+export default AppLayout

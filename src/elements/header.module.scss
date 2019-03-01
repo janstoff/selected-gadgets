@@ -1,0 +1,28 @@
+@import '../styling/colors.scss';
+
+.header {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	background-color: transparent;
+	height: auto;
+	width: 100%;
+	z-index: 1;
+}
+
+// .homeLink {
+// 	display: inline-block;
+// 	text-decoration: none; /* no underline */
+// 	position: absolute;
+// 	top: 4rem;
+// 	left: 4rem;
+// 	transition: all 1s;
+
+// 	img {
+// 		height: 3.5rem;
+
+// 		&:hover {
+// 			transform: translateY(-0.3rem);
+// 		}
+// 	}
+// }

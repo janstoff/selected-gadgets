@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Raleway|Quicksand');
+
+/* basic style resetting */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit; /* set box-sizing to be inherited across our entire app */
+}
+
+html {
+	font-size: 62.5%; /* to set the basic value for 1rem, i.e. 10px if the browser default is 16px */
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 1.7;
+	box-sizing: border-box;
+	text-align: center;
+	margin: 0 auto;
+	padding: 2rem;
+	background-color: whitesmoke;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
