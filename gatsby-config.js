@@ -1,4 +1,5 @@
 module.exports = {
+	pathPrefix: '/selected-gadgets',
 	plugins: [
 		'gatsby-plugin-sass',
 		'gatsby-plugin-typescript',
