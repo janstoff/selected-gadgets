@@ -1,7 +1,7 @@
 {
-	"name": "simple-contact",
+	"name": "selected-gadgets",
 	"private": true,
-	"description": "A Simple Contact Form WebApp built using Gatsby",
+	"description": "A Simple Contact Form WebApp built using GatsbyJS",
 	"version": "0.1.0",
 	"license": "MIT",
 	"scripts": {
@@ -10,7 +10,8 @@
 		"dev": "gatsby develop",
 		"start": "npm run develop",
 		"serve": "gatsby serve",
-		"test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+		"test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+		"deploy": "gatsby build --prefix-paths && gh-pages -d public"
 	},
 	"dependencies": {
 		"@types/react-router-hash-link": "^1.2.1",
@@ -32,6 +33,7 @@
 		"eslint": "^5.13.0",
 		"eslint-config-prettier": "^4.0.0",
 		"eslint-plugin-prettier": "^3.0.1",
+		"gh-pages": "^2.0.1",
 		"prettier": "^1.16.4",
 		"rimraf": "^2.6.3"
 	}
