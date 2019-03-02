@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react'
-import { HashLink } from 'react-router-hash-link'
+import { FormattedMessage as Translated } from 'react-intl'
 
 import styles from './navigationMenu.module.scss'
+import LocalizedLink from './LocalizedLink'
 
 class NavigationMenu extends Component {
 	state = {
@@ -26,29 +27,18 @@ class NavigationMenu extends Component {
 		}))
 	}
 
-	private renderNavOptions(): JSX.Element | null {
+	private renderSectionLinks(sections: string[]): JSX.Element | null {
 		if (this.state.menuOpen) {
 			return (
 				<ul
 					className={styles.menuList}
 					onMouseLeave={() => this.handleMenuClose()}
 				>
-					<HashLink
-						scroll={el =>
-							el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-						}
-						to="/contact#contact"
-					>
-						contact
-					</HashLink>
-					<HashLink
-						scroll={el =>
-							el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-						}
-						to="/about#about"
-					>
-						about
-					</HashLink>
+					{sections.map(section => (
+						<LocalizedLink to={`/#${section}`}>
+							<Translated id={`${section}-header`} />
+						</LocalizedLink>
+					))}
 				</ul>
 			)
 		}
@@ -65,7 +55,7 @@ class NavigationMenu extends Component {
 				>
 					<img src={require('../styling/images/menu.svg')} alt="Menu" />
 				</button>
-				{this.renderNavOptions()}
+				{this.renderSectionLinks(['home', 'about', 'contact'])}
 			</div>
 		)
 	}
