@@ -1,6 +1,6 @@
 import React, { Fragment } from 'React'
 
-import styles from './languageSwitch.module.scss'
+import styles from './languageSelect.module.scss'
 import locales from '../utils/constants/locales'
 import { navigate } from '@reach/router'
 

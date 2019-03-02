@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './header.module.scss'
-import LanguageSwitch from './LanguageSwitch'
+import LanguageSelect from './LanguageSelect'
 
 // import NavigationMenu from "../components/NavigationMenu";
 
@@ -16,7 +16,7 @@ interface HeaderProps {
 
 const Header: React.SFC<HeaderProps> = ({ locale }: HeaderProps) => (
 	<div className={styles.header}>
-		<LanguageSwitch locale={locale} />
+		<LanguageSelect locale={locale} />
 		{/* <HomeLink /> */}
 		{/* <NavigationMenu /> */}
 	</div>
