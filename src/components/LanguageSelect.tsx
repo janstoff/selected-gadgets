@@ -22,9 +22,7 @@ const LanguageSwitch: React.SFC<LanguageSwitchProps> = ({
 					className={
 						language === locale ? styles.switchBtnActive : styles.switchBtn
 					}
-					onClick={() =>
-						navigate(language === 'de' ? '/' : 'selected-gadgets/en/')
-					}
+					onClick={() => navigate(language === 'de' ? '/' : '/en/')}
 				>
 					{language}
 				</button>
