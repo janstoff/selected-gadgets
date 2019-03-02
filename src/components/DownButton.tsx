@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './downButton.module.scss'
 import LocalizedLink from './LocalizedLink'
-import { sections } from '../sections/__config'
+import { SECTIONS } from '../config'
 
 interface DownButtonProps {
 	readonly children?: any
@@ -11,12 +11,12 @@ interface DownButtonProps {
 const DownButton: React.SFC<DownButtonProps> = ({
 	children,
 }: DownButtonProps) => {
-	const firstSection = sections[0]
+	const firstSection = SECTIONS[0]
 
 	return (
 		<LocalizedLink className={styles.downButton} to={`/#${firstSection}`}>
 			{children}
-			<img src={require('../styling/images/down-arrow-white.svg')} alt="down" />
+			<img src={require('../styling/images/down-arrow.svg')} alt="down" />
 		</LocalizedLink>
 	)
 }

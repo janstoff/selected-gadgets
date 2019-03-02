@@ -1,4 +1,4 @@
-const locales = require('./src/utils/constants/locales.js')
+const locales = require('./src/config/locales.js')
 
 // For each page, basically just deleting it (so we can take over)
 // and creating it again for each language passing the locale to the page context.

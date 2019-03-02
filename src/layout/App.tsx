@@ -1,9 +1,13 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import {
 	IntlProvider,
 	addLocaleData,
 	FormattedMessage as Translated,
 } from 'react-intl'
+
+//Config
+import { APP_NAME } from '../config'
 
 // Styling
 import styles from './app.module.scss'
@@ -43,6 +47,10 @@ const AppLayout: React.SFC<AppProps> = ({ locale, children }: AppProps) => (
 		textComponent={React.Fragment}
 	>
 		<div className={styles.App}>
+			<Helmet>
+				<meta charSet="utf-8" />
+				<title>{APP_NAME}</title>
+			</Helmet>
 			<Header locale={locale} />
 			{children}
 			<BackToTopLink />

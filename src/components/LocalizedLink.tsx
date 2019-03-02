@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { injectIntl, InjectedIntlProps } from 'react-intl'
 
-import locales from '../utils/constants/locales'
+import locales from '../config/locales'
 
 interface LocalizedLinkProps extends InjectedIntlProps {
 	readonly to: string

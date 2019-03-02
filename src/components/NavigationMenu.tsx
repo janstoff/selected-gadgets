@@ -1,5 +1,7 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { FormattedMessage as Translated } from 'react-intl'
+
+import { SECTIONS } from '../config'
 
 import styles from './navigationMenu.module.scss'
 import LocalizedLink from './LocalizedLink'
@@ -55,7 +57,7 @@ class NavigationMenu extends Component {
 				>
 					<img src={require('../styling/images/menu-white.svg')} alt="Menu" />
 				</button>
-				{this.renderSectionLinks(['about', 'contact'])}
+				{this.renderSectionLinks(SECTIONS)}
 			</div>
 		)
 	}

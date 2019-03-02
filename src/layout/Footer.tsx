@@ -1,9 +1,9 @@
 import React from 'react'
 import { FormattedMessage as Translated } from 'react-intl'
 
+import { SECTIONS } from '../config'
 import styles from './footer.module.scss'
 import LocalizedLink from '../components/LocalizedLink'
-import { sections } from '../sections/__config'
 
 const renderSectionLinks = (sections: string[]) => (
 	<ul>
@@ -26,7 +26,7 @@ const Footer = () => (
 		</div>
 		<div className={styles.main}>
 			<div className={styles.elementWrapper}>
-				<div className={styles.navigation}>{renderSectionLinks(sections)}</div>
+				<div className={styles.navigation}>{renderSectionLinks(SECTIONS)}</div>
 			</div>
 			<div className={styles.elementWrapper}>
 				<div className={styles.copyright}>
