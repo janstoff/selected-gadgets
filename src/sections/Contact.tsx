@@ -40,7 +40,9 @@ const Contact: React.FunctionComponent<ContactProps> = ({
 				</label>
 			</div>
 			<div className={styles.formGroup}>
-				<PrimaryButton type="submit">send</PrimaryButton>
+				<PrimaryButton type="submit">
+					<Translated id="send-button-text" />
+				</PrimaryButton>
 			</div>
 		</form>
 	</SectionLayout>

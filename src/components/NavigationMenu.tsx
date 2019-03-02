@@ -53,9 +53,9 @@ class NavigationMenu extends Component {
 					onMouseEnter={() => this.handleMenuHover()}
 					onClick={() => this.handleMenuClick()}
 				>
-					<img src={require('../styling/images/menu.svg')} alt="Menu" />
+					<img src={require('../styling/images/menu-white.svg')} alt="Menu" />
 				</button>
-				{this.renderSectionLinks(['home', 'about', 'contact'])}
+				{this.renderSectionLinks(['about', 'contact'])}
 			</div>
 		)
 	}

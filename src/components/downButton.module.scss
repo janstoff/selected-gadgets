@@ -3,28 +3,24 @@
 .downButton {
 	display: block;
 	position: absolute;
-	right: 0.1rem;
-	padding: 1.5rem 4rem;
-	margin-bottom: 3rem;
+	padding: 4rem;
+	right: 2rem;
 	text-transform: uppercase;
 	text-decoration: none; /* no underline */
 	font-size: 2rem;
 	font-weight: 600;
 	transition: all 0.2s;
 	cursor: pointer;
-	z-index: 1;
 
 	&:hover {
-		transform: translateY(-0.3rem);
-		box-shadow: 0 1rem 2rem rgba($color-primary-medium, 0.2);
+		transform: translateY(0.4rem);
 	}
 
 	&:active {
 		transform: translateY(-0.1rem);
-		box-shadow: 0 0.5rem 1rem rgba($color-primary-medium, 0.2);
 	}
 
 	img {
-		height: 1rem;
+		height: 4rem;
 	}
 }

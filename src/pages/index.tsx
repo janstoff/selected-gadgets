@@ -20,8 +20,5 @@ export default ({ pathContext: { locale } }): JSX.Element => (
 		<Landing />
 		<About />
 		<Contact />
-		<LocalizedLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-			<Translated id="back-to-top-link" />
-		</LocalizedLink>
 	</AppLayout>
 )

@@ -1,5 +1,7 @@
 {
-	"brand-name": "Cool gadgets",
+	"company": "Unternehmen",
+	"company-name": "sg GmbH",
+	"brand-name": "selected gadgets",
 	"brand-heading-slogan": "von den krassesten startups",
 	"contact-button-text": "SCHREIB' UNS",
 	"contact-header": "kontakt",
@@ -9,6 +11,8 @@
 	"about-body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
 	"landing-header": "start",
 	"message-label": "deine Nachricht",
+	"send-button-text": "absenden",
 	"back-to-top-link": "zurück nach oben",
-	"learn-more-button-text": "hier mehr..."
+	"learn-more-button-text": "hier mehr...",
+	"footer-copyright": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna..."
 }

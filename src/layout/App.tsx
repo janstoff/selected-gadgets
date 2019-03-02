@@ -1,11 +1,17 @@
 import React from 'react'
-import { IntlProvider, addLocaleData } from 'react-intl'
+import {
+	IntlProvider,
+	addLocaleData,
+	FormattedMessage as Translated,
+} from 'react-intl'
 
 // Styling
 import styles from './app.module.scss'
 
 // Components
-import Header from '../components/header'
+import Footer from './Footer'
+import Header from './Header'
+import LocalizedLink from '../components/LocalizedLink'
 
 // Locale data
 import enData from 'react-intl/locale-data/en'
@@ -24,6 +30,12 @@ interface AppProps {
 	readonly children: any
 }
 
+const BackToTopLink = () => (
+	<LocalizedLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+		<Translated id="back-to-top-link" />
+	</LocalizedLink>
+)
+
 const AppLayout: React.SFC<AppProps> = ({ locale, children }: AppProps) => (
 	<IntlProvider
 		locale={locale}
@@ -33,6 +45,8 @@ const AppLayout: React.SFC<AppProps> = ({ locale, children }: AppProps) => (
 		<div className={styles.App}>
 			<Header locale={locale} />
 			{children}
+			<BackToTopLink />
+			<Footer />
 		</div>
 	</IntlProvider>
 )

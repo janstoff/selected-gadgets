@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { FormattedMessage as Translated } from 'react-intl'
 
 import styles from './landing.module.scss'
@@ -20,24 +20,24 @@ const ContactButton: React.SFC<ContactButtonProps> = ({
 )
 
 const Landing: React.SFC = () => (
-	<div className={styles.base}>
-		<header className={styles.heading}>
-			<h1>
-				<span className={styles.headingMain}>
-					<Translated id="brand-name" />
-				</span>
-				<span className={styles.headingSub}>
-					<Translated id="brand-heading-slogan" />
-				</span>
-			</h1>
-			<ContactButton to="/#contact">
-				<Translated id="contact-button-text" />
-			</ContactButton>
+	<Fragment>
+		<header className={styles.base}>
+			<div className={styles.heading}>
+				<h1>
+					<span className={styles.headingMain}>
+						<Translated id="brand-name" />
+					</span>
+					<span className={styles.headingSub}>
+						<Translated id="brand-heading-slogan" />
+					</span>
+				</h1>
+				<ContactButton to="/#contact">
+					<Translated id="contact-button-text" />
+				</ContactButton>
+			</div>
+			<DownButton />
 		</header>
-		<DownButton>
-			<Translated id="learn-more-button-text" />
-		</DownButton>
-	</div>
+	</Fragment>
 )
 
 export default Landing

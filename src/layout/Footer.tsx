@@ -1,0 +1,40 @@
+import React from 'react'
+import { FormattedMessage as Translated } from 'react-intl'
+
+import styles from './footer.module.scss'
+import LocalizedLink from '../components/LocalizedLink'
+import { sections } from '../sections/__config'
+
+const renderSectionLinks = (sections: string[]) => (
+	<ul>
+		{sections.map(section => (
+			<li>
+				<LocalizedLink className={styles.link} to={`/#${section}`}>
+					<Translated id={`${section}-header`} />
+				</LocalizedLink>
+			</li>
+		))}
+	</ul>
+)
+
+const Footer = () => (
+	<footer className={styles.footer}>
+		<div className={styles.logoBox}>
+			<LocalizedLink to="/">
+				<img src={require('../styling/images/home-white.svg')} alt="Home" />
+			</LocalizedLink>
+		</div>
+		<div className={styles.main}>
+			<div className={styles.elementWrapper}>
+				<div className={styles.navigation}>{renderSectionLinks(sections)}</div>
+			</div>
+			<div className={styles.elementWrapper}>
+				<div className={styles.copyright}>
+					<Translated id="footer-copyright" />
+				</div>
+			</div>
+		</div>
+	</footer>
+)
+
+export default Footer

@@ -1,7 +1,7 @@
 @import '../styling/colors.scss';
 
 .base {
-	height: 100vh;
+	height: 95vh;
 	background-image: linear-gradient(
 			to right bottom,
 			rgba($gradient-primary, 0.92),
@@ -10,7 +10,7 @@
 		url(../styling/images/gadgets.jpg);
 	background-size: cover;
 	background-position: top;
-	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70vh);
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;

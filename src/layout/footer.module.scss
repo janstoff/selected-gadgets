@@ -1,0 +1,73 @@
+@import '../styling/colors.scss';
+
+.footer {
+	background-color: $color-primary-grey-dark;
+	color: $color-text;
+	padding: 5rem 0;
+	font-size: 1.4rem;
+	margin-top: 10rem;
+}
+
+.logoBox {
+	margin-bottom: 4rem;
+
+	img {
+		height: 6rem;
+	}
+}
+
+.main {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 4rem;
+}
+
+.elementWrapper {
+	width: 50%;
+}
+
+.navigation {
+	max-width: 65%;
+	padding-top: 1rem;
+	font-size: 1.1rem;
+	border-top: 1.2px solid $color-primary-light;
+	display: inline-block;
+
+	ul {
+		list-style: none;
+
+		li {
+			display: inline-block;
+
+			&:not(:last-child) {
+				margin-right: 1.5rem;
+			}
+		}
+	}
+}
+
+.copyright {
+	max-width: 65%;
+	padding-top: 1rem;
+	font-size: 1rem;
+	border-top: 1.2px solid $color-primary-light;
+	display: inline-block;
+}
+
+.link {
+	&:link,
+	&:visited {
+		color: $color-text;
+		text-decoration: none;
+		text-transform: uppercase;
+		display: inline-block;
+		transition: all 0.4s;
+	}
+
+	&:hover,
+	&:active {
+		color: $color-primary-light;
+		box-shadow: 0 1rem 2rem rgba($color-primary, 0.3);
+		transform: translateY(-0.2rem);
+	}
+}
