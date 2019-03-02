@@ -11,6 +11,7 @@
 
 html {
 	font-size: 62.5%; /* to set the basic value for 1rem, i.e. 10px if the browser default is 16px */
+	scroll-behavior: smooth;
 }
 
 body {

@@ -20,8 +20,8 @@ const ContactButton: React.SFC<ContactButtonProps> = ({
 )
 
 const Landing: React.SFC = () => (
-	<div className={styles.container}>
-		<div className={styles.heading}>
+	<div className={styles.base}>
+		<header className={styles.heading}>
 			<h1>
 				<span className={styles.headingMain}>
 					<Translated id="brand-name" />
@@ -33,7 +33,7 @@ const Landing: React.SFC = () => (
 			<ContactButton to="/#contact">
 				<Translated id="contact-button-text" />
 			</ContactButton>
-		</div>
+		</header>
 		<DownButton>
 			<Translated id="learn-more-button-text" />
 		</DownButton>

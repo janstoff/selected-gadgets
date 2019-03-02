@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './header.module.scss'
-// import { Link } from "react-router-dom";
-import LanguageSwitch from '../components/LanguageSwitch'
+import LanguageSwitch from './LanguageSwitch'
 
 // import NavigationMenu from "../components/NavigationMenu";
 
@@ -16,11 +15,11 @@ interface HeaderProps {
 // );
 
 const Header: React.SFC<HeaderProps> = ({ locale }: HeaderProps) => (
-	<header className={styles.header}>
+	<div className={styles.header}>
 		<LanguageSwitch locale={locale} />
 		{/* <HomeLink /> */}
 		{/* <NavigationMenu /> */}
-	</header>
+	</div>
 )
 
 export default Header

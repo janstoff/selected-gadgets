@@ -21,7 +21,8 @@
 		"react": "^16.7.0",
 		"react-dom": "^16.7.0",
 		"react-intl": "^2.8.0",
-		"react-router-hash-link": "^1.2.1"
+		"react-router-hash-link": "^1.2.1",
+		"smooth-scroll": "^15.0.0"
 	},
 	"devDependencies": {
 		"eslint": "^5.13.0",

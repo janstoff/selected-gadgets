@@ -5,7 +5,7 @@ import { IntlProvider, addLocaleData } from 'react-intl'
 import styles from './app.module.scss'
 
 // Components
-import Header from '../elements/header'
+import Header from '../components/header'
 
 // Locale data
 import enData from 'react-intl/locale-data/en'
