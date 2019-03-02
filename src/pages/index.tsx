@@ -7,10 +7,13 @@ import Contact from '../sections/Contact'
 import About from '../sections/About'
 import LocalizedLink from '../components/LocalizedLink'
 
-// if (typeof window !== 'undefined') {
-// 	// Make scroll behavior of internal links smooth
-// 	require('smooth-scroll')('a[href*="#"]')
-// }
+if (typeof window !== 'undefined') {
+	// Make scroll behavior of internal links smooth
+	require('smooth-scroll')('a[href*="#"]', {
+		speed: 100,
+		speedAsDuration: true,
+	})
+}
 
 export default ({ pathContext: { locale } }): JSX.Element => (
 	<AppLayout locale={locale}>
